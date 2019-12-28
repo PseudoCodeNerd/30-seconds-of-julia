@@ -30,8 +30,12 @@ function jaro_distance(s1, s2)
     end
   end
   t = (m - p) / 2
-  d = 1 / 3 * (m / length(s1) + m / length(s2) + (m - t) / m)
-  return d
+  if m != 0 
+    d = 1 / 3 * (m / length(s1) + m / length(s2) + (m - t) / m)
+    return d
+  else
+    return 0
+  end
 end
 ```
 
