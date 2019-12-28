@@ -8,7 +8,7 @@ The Jaro distance is a measure of similarity between two strings and is differen
 
 Levenshtein counts the number of edits (insertions, deletions, or substitutions) needed to convert one string to the other while the Jaro similarity is a measure of characters in common, being no more than half the length of the longer string in distance, with consideration for transpositions. It's suited for suited for comparing smaller strings like words and names.
 
-The score is normalized such that   0   equates to no similarity and   1   is an exact match.
+The score is normalized such that 0 equates to no similarity and 1 is an exact match.
 
 ```jl
 function jaro_distance(s1, s2)
