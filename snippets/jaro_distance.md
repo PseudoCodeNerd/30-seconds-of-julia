@@ -21,10 +21,10 @@ function jaro_distance(s1, s2)
           l2 += 1
           if i == j
               if abs(l2 - l1) ≤ match
-                  m += 1
+                m += 1
               end
               if l2 == l1
-                  p += 1
+                p += 1
               end
           end
       end
