@@ -15,19 +15,19 @@ function jaro_distance(s1, s2)
   l1 = l2 = m = p = t = 0
   match = max(length(s1), length(s2)) / 2 - 1
   for i in s1[1:end]
-      l1 += 1
-      l2 = 0
-      for j in s2[1:end]
-          l2 += 1
-          if i == j
-              if abs(l2 - l1) ≤ match
-                m += 1
-              end
-              if l2 == l1
-                p += 1
-              end
-          end
+    l1 += 1
+    l2 = 0
+    for j in s2[1:end]
+      l2 += 1
+      if i == j
+        if abs(l2 - l1) ≤ match
+          m += 1
+        end
+        if l2 == l1
+          p += 1
+        end
       end
+    end
   end
   t = (m - p) / 2
   d = 1 / 3 * (m / length(s1) + m / length(s2) + (m - t) / m)
